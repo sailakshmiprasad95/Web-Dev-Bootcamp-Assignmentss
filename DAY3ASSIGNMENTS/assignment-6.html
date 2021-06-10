@@ -1,0 +1,56 @@
+<!--Assignment-6-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment-6</title>
+<style>
+	p{
+	color: red;
+	}
+</style>
+</head>
+<body>
+<form>
+	<fieldset id="abcd">
+	<legend>Details</legend>
+	Name:<input type="text" id="uname" required><br><br>
+	Aadhar Number:<input type="Number" id="aadhar"required><br><br>
+	Address:<input type="text" id="address"><br><br>
+	<button onclick="readData()">Submit</button>
+	</fieldset>
+	<h1>Result Table</h1>
+<table border="1">
+	<tr>
+		<th>Name</th>
+		<th>Aadhar Number</th>
+		<th>Addess</th>
+	</tr>
+	<tr>
+		<td id="abc"></td>
+		<td id="123"></td>
+		<td id="abc"></td>
+	</tr>
+	<tr>
+		<td id="abc">Not yet read</td>
+		<td id="123">Not yet read</td>
+		<td id="abc">Not yet read</td>
+	</tr>
+</table>
+	<p id="result"></p>
+<script>
+	function readData(){
+	var uname=document.getElementById('uname').value;
+	var aadhar=document.getElementById('aadhar').value;
+	var address=document.getElementById('address').value;
+	var res=document.getElementById('abcd').value
+	document.getElementById('abc').innerHTML=uname;
+	document.getElementById('123').innerHTML=aadhar
+	document.getElementById('abc').innerHTML=address;
+	document.getElementById('result').innerHTML=res;
+	}
+</script>
+</form>
+</body>
+</html>
+
